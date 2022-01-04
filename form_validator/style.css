@@ -1,0 +1,14 @@
+.invalid-input {
+  border-color: red;
+}
+.error-message {
+  color: red;
+  display: none;
+}
+.displayable {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

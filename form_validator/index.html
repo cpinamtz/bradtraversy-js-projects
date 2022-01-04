@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validator</title>
+  </head>
+  <body>
+    <h2>My Form</h2>
+    <form action="submit">
+      <label for="email">Email:</label><br />
+      <input type="text" id="email-input" name="email" /><br />
+      <span class="error-message">The field is required</span>
+      <span class="error-message not-email-regex-input-error-message"
+        >This is not an email!</span
+      >
+      <label for="password">Password:</label><br />
+      <input type="password" id="psswd-input" name="psswd" /><br />
+      <span class="error-message">The field is required</span>
+      <span class="error-message min-length-password-error-message"
+        >The password needs to have at least 5 characters</span
+      >
+      <span class="error-message max-length-password-error-message"
+        >The password needs to have at most 15 characters</span
+      >
+      <span class="error-message match-password-error-message"
+        >Both passwords need to match</span
+      >
+      <label for="passwordConfirm">Repeat your password:</label><br />
+      <input
+        type="password"
+        id="psswd-confirm-input"
+        name="psswdConfirm"
+      /><br />
+      <span class="error-message match-password-error-message"
+        >Both passwords need to match</span
+      >
+      <span class="error-message">The field is required</span>
+      <input value="Submit" id="submit-button" />
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>
