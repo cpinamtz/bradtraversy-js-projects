@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(31, 31, 47);
+}
+span {
+  color: white;
+}
+
+.legend {
+  display: flex;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.cinema {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.screen {
+  background-color: white;
+  width: 239px;
+  height: 30px;
+  margin-bottom: 1em;
+  box-shadow: 0px 8px 13px 4px white;
+}
+.seat-legend {
+  display: flex;
+  margin-right: 30px;
+}
+.seat-legend > span {
+  margin-left: 5px;
+  color: rgb(105, 104, 104);
+}
+.seat-icon {
+  border-radius: 10px 10px 0px 0px;
+  width: 20px;
+  height: 20px;
+}
+.hole-icon {
+  width: 20px;
+  height: 20px;
+}
+.not-assigned-seat {
+  background-color: darkslategrey;
+}
+.seats .not-assigned-seat:hover {
+  transform: scale(1.1);
+}
+.selected-seat {
+  background-color: darkturquoise;
+}
+.seats .selected-seat:hover {
+  transform: scale(1.1);
+}
+.occupied-seat {
+  background-color: white;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Seat Picking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <span>Seleccione una película:</span>
+    <select name="select" id="movie-select"></select>
+    <div class="legend">
+      <div class="seat-legend">
+        <div class="not-assigned-seat seat-icon"></div>
+        <span>N/A</span>
+      </div>
+      <div class="seat-legend">
+        <div class="selected-seat seat-icon"></div>
+        <span>Seleccionada</span>
+      </div>
+      <div class="seat-legend">
+        <div class="occupied-seat seat-icon"></div>
+        <span>Ocupada</span>
+      </div>
+    </div>
+    <div class="cinema">
+      <div class="screen"></div>
+      <table class="seats">
+        <tr>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="occupied-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+        </tr>
+        <tr>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="occupied-seat seat-icon"></div></td>
+          <td><div class="occupied-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+        </tr>
+        <tr>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+        </tr>
+        <tr>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+        </tr>
+        <tr>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="hole-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+          <td><div class="not-assigned-seat seat-icon"></div></td>
+        </tr>
+      </table>
+    </div>
+    <span
+      >Usted ha seleccionado <span id="num-seats-selected">0</span> asientos por
+      el precio de <span id="price-seats-selected">0</span>€</span
+    >
+  </body>
+  <script src="./script.js"></script>
+</html>
