@@ -9,6 +9,21 @@ const data = [
 
 let ticketPrice = 0;
 
+function refreshNumSeatsSelectedElement() {
+  const element = document.getElementById("num-seats-selected");
+  numSelectedSeats = document.querySelectorAll(".seats .selected-seat").length;
+
+  element.innerText = numSelectedSeats;
+}
+
+function refreshPriceSeatsSelectedElement() {
+  const element = document.getElementById("price-seats-selected");
+  console.log(element.innerText);
+  numSelectedSeats = document.querySelectorAll(".seats .selected-seat").length;
+
+  element.innerText = numSelectedSeats * ticketPrice;
+}
+
 function setSeatsEventListeners() {
   const selectableSeatSelectors = [
     ".seats .not-assigned-seat",
@@ -43,25 +58,6 @@ function setSeatsEventListeners() {
     refreshPriceSeatsSelectedElement();
   }
 
-  function refreshNumSeatsSelectedElement() {
-    const element = document.getElementById("num-seats-selected");
-    numSelectedSeats = document.querySelectorAll(
-      ".seats .selected-seat"
-    ).length;
-
-    element.innerText = numSelectedSeats;
-  }
-
-  function refreshPriceSeatsSelectedElement() {
-    const element = document.getElementById("price-seats-selected");
-    console.log(element.innerText);
-    numSelectedSeats = document.querySelectorAll(
-      ".seats .selected-seat"
-    ).length;
-
-    element.innerText = numSelectedSeats * ticketPrice;
-  }
-
   selectableSeatSelectors.forEach((selector) => {
     document.querySelectorAll(selector).forEach((element) => {
       element.addEventListener("click", handleSeat);
@@ -69,16 +65,25 @@ function setSeatsEventListeners() {
   });
 }
 
+function setPickAMovieEventListener() {
+  const element = document.getElementById("movie-select");
+  element.addEventListener("change", function () {
+    ticketPrice = this.value;
+    refreshPriceSeatsSelectedElement();
+  });
+}
+
 function fillMovieSelectElement() {
   const element = document.getElementById("movie-select");
-  console.log(element);
   data.forEach((movieData) => {
     const opt = document.createElement("option");
     opt.value = movieData.price;
     opt.innerText = `${movieData.name} (${movieData.price}€)`;
     element.appendChild(opt);
   });
+  ticketPrice = element.children[0].value;
 }
 
 fillMovieSelectElement();
+setPickAMovieEventListener();
 setSeatsEventListeners();
